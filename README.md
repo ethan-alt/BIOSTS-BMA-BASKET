@@ -63,23 +63,24 @@ Folder: BMA-SOFTWARE
 		RUN ORDER:
 		[1] K5-SIM.R --> Perform base set of simulations to explore different design inputs.
 		
-			(i) This program (and all others) can be run in a windows environment or a Linux  HPC environment. 
+			(i) This program (and all others) can be run in a windows environment or a Linux HPC environment. 
 			
 			(ii) For each program (other than K5-SAMPLE-CALCS.R), there is a corresponding shell script that can be submitted to a 
-			     SLURM scheduler in a Linux  HPC environment (i.e., sbatch BATCH-K5.sh).
+			     SLURM scheduler in a Linux HPC environment using the SBATCH command (i.e., sbatch BATCH-K5.sh).
 			
-			(iii) This program runs a large number of simulation studies to identify an optimal design. The program is designed to be used in a HPC environment.
+			(iii) This program runs a large number of simulation studies to identify an optimal design. The program is designed to be used in a HPC environment
+			      and provides and example of a grid search type of approach to design optimization.
 		
 		[2] K5-SIM-OPTIMAL.R --> Estimate properties of the optimal design.
 		
-			(i) This program is essentially  the same as [1] only the program is setup to perform design simulations only for the optimal design from the paper.
+			(i) This program is essentially the same as [1] only the program is setup to perform design simulations for the optimal design from the paper.
 			
 			(ii) This program will be most useful to those who wish to explore designs in a one-at-a-time format (i.e., test inputs and modify them rather than
-			     perform a large scale grid search).
+			     perform a large scale grid search as in [1]).
 			
 		[3] K5-SIM-TUNING.R	--> Perform simulations to investigate tuning parameter.
 		
-			(i) This program is essentially  the same as [2] only the program is setup to perform design simulations for the optimal design from the paper but with tuning
+			(i) This program is essentially the same as [2] only the program is setup to perform design simulations for the optimal design from the paper but with tuning
 			    parameter values equal to 0, 2 (optimal), and 4 for comparison purposes.
 			
 		[4] Kx-SIM-TIMING.R	--> Perform simulations to estimate BMA design run times (single core).
@@ -88,19 +89,21 @@ Folder: BMA-SOFTWARE
 			
 			(ii) Five replicates of design simulations are performed for each number of baskets.
 			
-			(iii) The program and shell script is setup to run on an HPC environment for ease.
+			(iii) The program and shell script is setup to run on an HPC environment. The program is not intended for use beyond the paper as this was just developed
+			      to help inform on the time required for BMA simulations.
 	
 		[5] Kx-SIM-TIMING-MULTI.R --> Perform parallel simulations to estimate BMA design run times (25 cores).
 		
 			(i) This program performs design simulations for a varying number of baskets (4 to 12) using 25 computing cores for each set of design simulations.	
 
-			(ii) The program and shell script is setup to run on an HPC environment for ease.			
+			(ii) The program and shell script is setup to run on an HPC environment. The program is not intended for use beyond the paper as this was just developed
+			     to help inform on the time required for BMA simulations.			
 			
 		[6] K5-SAMPLE-CALCS.R --> Compute basket classification probabilities.
 		
 			(i) This program gives an example for computing posterior probabilities of response rate equivalence.
 
-			(ii) No shell script is provided for this program as computations are for a single dataset and therefore instantaneous.
+			(ii) No shell script is provided for this program as computations are for a single dataset and therefore are nearly instantaneous to compute.
 	
 	SUBFOLDER: RESULTS_OPTIMAL
 	Folder to store results for optimal design simulations.
