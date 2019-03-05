@@ -61,3 +61,16 @@ Description: Contains all programs and scripts necessary to perform BMA design a
 	
 	SUBFOLDER: SOURCE
 	Folder containing Rcpp code for BMA design method.	
+	
+	
+===========================================================================================================================================
+Folder: CBHM-SOFTWARE
+Description: Contains SAS implementation of the CBHM design (Calibrated Bayesian hierarchical model)
+
+===========================================================================================================================================
+Folder: CUN-SOFTWARE
+Description: Contains SAS implementation of the CUN design (Frequentist two-stage design)
+
+===========================================================================================================================================
+Folder: SIM-SOFTWARE
+Description: Contains SAS implementation of Simon's Optimal Two-Stage Design 
