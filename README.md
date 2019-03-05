@@ -120,12 +120,38 @@ Folder: BMA-SOFTWARE
 	
 ===========================================================================================================================================
 Folder: CBHM-SOFTWARE
-Description: Contains SAS implementation of the CBHM design (Calibrated Bayesian hierarchical model)
+Description: 	Contains SAS implementation of the CBHM design (Calibrated Bayesian hierarchical model)
+				The folder contains the following subfolders:
+		
+				(1) MACROS   -> SAS macros used by the CBHM SAS programs
+				(2) SOURCE   -> SAS code to perform MCMC for CBHM method. This code is called from with a SAS macro and within a PROC IML 
+								step and so the code must be incorporated in the macro with a %INCLUDE statement.
+				(3) RESULTS  -> Folder to store SAS datasets containing CBHM simulation results (example dataset provided only)
+				(4) MODULES  -> Folder that contains stored IML modules needed for CBHM design simulations.
+				(5) PROGRAMS -> Folder contains SAS programs to created stored IML modules (00-IML-modules.sas) and to perform CBHM design
+								simulations (01-IML-CBHM.sas) using a grid search approach. The program is designed to run on a Linux HPC.
 
 ===========================================================================================================================================
 Folder: CUN-SOFTWARE
-Description: Contains SAS implementation of the CUN design (Frequentist two-stage design)
-
+Description: 	Contains SAS implementation of the CUN design (Frequentist two-stage design)
+				The folder contains the following subfolders:
+		
+				(1) MACROS   -> SAS macros used by the CUN SAS programs
+				(2) SOURCE   -> SAS code to Fisher's Exact Test for CUN method. This code is called from with a SAS macro and within a PROC IML 
+								step and so the code must be incorporated in the macro with a %INCLUDE statement.
+				(3) RESULTS  -> Folder to store SAS datasets containing CUN simulation results (example dataset provided only)
+				(4) MODULES  -> Folder that contains stored IML modules needed for CUN design simulations.
+				(5) PROGRAMS -> Folder contains SAS programs to created stored IML modules (00-IML-modules.sas) and to perform CUN design
+								simulations (01-IML-CBHM.sas) using a grid search approach on a Linux HPC, and to perform CUN design 
+								simulations for the optimal CUN design.
 ===========================================================================================================================================
 Folder: SIM-SOFTWARE
-Description: Contains SAS implementation of Simon's Optimal Two-Stage Design 
+Description: 	Contains SAS implementation of Simon's Optimal Two-Stage Design 
+				The folder contains the following subfolders:
+		
+				(1) MACROS   -> SAS macros used by the SIM SAS programs
+				(3) RESULTS  -> Folder to store SAS datasets containing SIM simulation results (example dataset provided only)
+				(4) MODULES  -> Folder that contains stored IML modules needed for SIM design simulations.
+				(5) PROGRAMS -> Folder contains SAS programs to created stored IML modules (00-IML-modules.sas) and to perform SIM design
+								simulations (01-IML-simon.sas).
+
