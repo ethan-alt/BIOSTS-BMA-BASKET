@@ -15,7 +15,7 @@ Folder: BMA-SOFTWARE
 		[7]  integer      - futOnly    -> indicator for whether individual baskets should only stop early for futility (i.e., inactivity)
 		[8]  vector (dbl) - rRatesNull -> vector of null response rates for the baskets (can all be equal to same value if desired)
 		[9]  vector (dbl) - rRatesAlt  -> vector of target response rates for the baskets (can all be equal to the same value if desired)
-	    [10] integer      - minSSFut   -> minimum sample size to assess futility (inactivity)
+	        [10] integer      - minSSFut   -> minimum sample size to assess futility (inactivity)
 		[11] integer      - minSSEff   -> minimum sample size to assess efficacy (activity)
 		[12] matrix (int) - minSSEnr   -> minimum sample size to enrollment in each basket between analyses
 		[13] matrix (int) - maxSSEnr   -> maximum sample size to enrollment in each basket between analyses
